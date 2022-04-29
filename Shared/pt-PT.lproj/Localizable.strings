@@ -1626,9 +1626,6 @@
 /* General settings section title */
 "Settings.General.SectionName" = "Geral";
 
-/* In the settings menu, on the Firefox homepage customization section, this is the description below the section, describing what the options in the section are for. */
-"Settings.Home.Option.Description" = "Escolha o conteúdo que gostaria de ver na página inicial do Firefox.";
-
 /* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
 "Settings.Home.Option.JumpBackIn" = "Regressar";
 
@@ -1659,14 +1656,14 @@
 /* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Firefox Homepage. */
 "Settings.Home.Option.StartAtHome.Title" = "Ecrã de abertura";
 
-/* In the settings menu, this is the title of the Firefox Homepage customization settings section */
-"Settings.Home.Option.Title" = "Página inicial do Firefox";
-
 /* In the settings menu, on the Firefox homepage customization section, this is the title for the option that allows users to access the wallpaper settings for the application. */
 "Settings.Home.Option.Wallpaper" = "Fundo";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string for the amethyst firefox wallpaper. */
 "Settings.Home.Option.Wallpaper.Accessibility.AmethystWallpaper.v99" = "Imagem de fundo do Firefox, padrão ametista.";
+
+/* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the beach hills firefox wallpaper. */
+"Settings.Home.Option.Wallpaper.Accessibility.BeachHillsWallpaper.v100" = "Imagem de fundo do Firefox, padrão de colinas de praia.";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the cerulean firefox wallpaper. */
 "Settings.Home.Option.Wallpaper.Accessibility.CeruleanWallpaper.v99" = "Imagem de fundo do Firefox, padrão cerúleo.";
@@ -1679,6 +1676,9 @@
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string of the toggle for turning wallpaper cycling shortcut on or off on the homepage. */
 "Settings.Home.Option.Wallpaper.Accessibility.ToggleButton" = "Acionador do ciclo de fundos da página inicial";
+
+/* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the twilight hills firefox wallpaper. */
+"Settings.Home.Option.Wallpaper.Accessibility.TwilightHillsWallpaper.v100" = "Imagem de fundo do Firefox, padrão de colinas crepusculares.";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the title of the section that allows users to change the wallpaper settings for the application. */
 "Settings.Home.Option.Wallpaper.CollectionTitle" = "ECRÃ DE ABERTURA";
