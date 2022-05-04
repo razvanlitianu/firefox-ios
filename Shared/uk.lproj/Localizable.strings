@@ -1365,7 +1365,7 @@
 "ScanQRCode.PermissionError.Message" = "Дозвольте Firefox доступ до камери пристрою, відкривши Параметри -> Приватність -> Камера.";
 
 /* Text of the prompt to setup the camera authorization for the Scan QR Code feature. */
-"ScanQRCode.PermissionError.Message.v100" = "Перейдіть до «Налаштування» пристрою > «Firefox». Дозвольте Firefox отримати доступ до камери.";
+"ScanQRCode.PermissionError.Message.v100" = "Відкрийте «Параметри» пристрою > «Firefox». Дозвольте Firefox отримати доступ до камери.";
 
 /* Title for the QR code scanner view. */
 "ScanQRCode.View.Title" = "Сканувати QR-код";
@@ -1626,9 +1626,6 @@
 /* General settings section title */
 "Settings.General.SectionName" = "Загальні";
 
-/* In the settings menu, on the Firefox homepage customization section, this is the description below the section, describing what the options in the section are for. */
-"Settings.Home.Option.Description" = "Оберіть, що ви побачите на домівці Firefox.";
-
 /* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
 "Settings.Home.Option.JumpBackIn" = "Назад до";
 
@@ -1659,14 +1656,14 @@
 /* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Firefox Homepage. */
 "Settings.Home.Option.StartAtHome.Title" = "Початковий екран";
 
-/* In the settings menu, this is the title of the Firefox Homepage customization settings section */
-"Settings.Home.Option.Title" = "Домівка Firefox";
-
 /* In the settings menu, on the Firefox homepage customization section, this is the title for the option that allows users to access the wallpaper settings for the application. */
 "Settings.Home.Option.Wallpaper" = "Шпалери";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string for the amethyst firefox wallpaper. */
 "Settings.Home.Option.Wallpaper.Accessibility.AmethystWallpaper.v99" = "Шпалери Firefox, аметистовий візерунок.";
+
+/* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the beach hills firefox wallpaper. */
+"Settings.Home.Option.Wallpaper.Accessibility.BeachHillsWallpaper.v100" = "Шпалери Firefox, візерунок з пляжними пагорбами.";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the cerulean firefox wallpaper. */
 "Settings.Home.Option.Wallpaper.Accessibility.CeruleanWallpaper.v99" = "Шпалери Firefox, блакитний візерунок.";
@@ -1679,6 +1676,9 @@
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string of the toggle for turning wallpaper cycling shortcut on or off on the homepage. */
 "Settings.Home.Option.Wallpaper.Accessibility.ToggleButton" = "Перемикач циклу шпалер домівки";
+
+/* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the twilight hills firefox wallpaper. */
+"Settings.Home.Option.Wallpaper.Accessibility.TwilightHillsWallpaper.v100" = "Шпалери Firefox, візерунок пагорбів у сутінках.";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the title of the section that allows users to change the wallpaper settings for the application. */
 "Settings.Home.Option.Wallpaper.CollectionTitle" = "ПОЧАТКОВИЙ ЕКРАН";
