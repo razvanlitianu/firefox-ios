@@ -569,7 +569,7 @@
 "History" = "Jujutan";
 
 /* Title for button in the history panel to clear recent history */
-"HistoryPanel.ClearHistoryButtonTitle" = "Hapus Jujutan...";
+"HistoryPanel.ClearHistoryButtonTitle" = "Hapus Jujutan…";
 
 /* Option title to clear all browsing history. */
 "HistoryPanel.ClearHistoryMenuOptionEverything" = "Sagalana";
@@ -791,7 +791,7 @@
 "Last month" = "Bulan Kamari";
 
 /* Remote tabs last synced time. Argument is the relative date string. */
-"Last synced: %@" = "Singkronan Panungtung";
+"Last synced: %@" = "Singkronan Panungtung: %@";
 
 /* History tableview section header */
 "Last week" = "Minggu Kamari";
@@ -1626,9 +1626,6 @@
 /* General settings section title */
 "Settings.General.SectionName" = "Umum";
 
-/* In the settings menu, on the Firefox homepage customization section, this is the description below the section, describing what the options in the section are for. */
-"Settings.Home.Option.Description" = "Pilih kontén anu katempo dina kaca tepas Firefox.";
-
 /* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
 "Settings.Home.Option.JumpBackIn" = "Asup Deui";
 
@@ -1659,14 +1656,14 @@
 /* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Firefox Homepage. */
 "Settings.Home.Option.StartAtHome.Title" = "Layar pamuka";
 
-/* In the settings menu, this is the title of the Firefox Homepage customization settings section */
-"Settings.Home.Option.Title" = "Tepas Firefox";
-
 /* In the settings menu, on the Firefox homepage customization section, this is the title for the option that allows users to access the wallpaper settings for the application. */
 "Settings.Home.Option.Wallpaper" = "Latar";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string for the amethyst firefox wallpaper. */
 "Settings.Home.Option.Wallpaper.Accessibility.AmethystWallpaper.v99" = "Latar Firefox, pola kucubung.";
+
+/* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the beach hills firefox wallpaper. */
+"Settings.Home.Option.Wallpaper.Accessibility.BeachHillsWallpaper.v100" = "Latar Firefox, pola pasir basisir.";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the cerulean firefox wallpaper. */
 "Settings.Home.Option.Wallpaper.Accessibility.CeruleanWallpaper.v99" = "Latar Firefox, pola biru langit.";
@@ -1679,6 +1676,9 @@
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string of the toggle for turning wallpaper cycling shortcut on or off on the homepage. */
 "Settings.Home.Option.Wallpaper.Accessibility.ToggleButton" = "Atur daur latar tepas";
+
+/* In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the twilight hills firefox wallpaper. */
+"Settings.Home.Option.Wallpaper.Accessibility.TwilightHillsWallpaper.v100" = "Latar Firefox, pola pasir layung.";
 
 /* In the settings menu, on the Firefox wallpaper customization screen, this is the title of the section that allows users to change the wallpaper settings for the application. */
 "Settings.Home.Option.Wallpaper.CollectionTitle" = "LAYAR BUBUKA";
