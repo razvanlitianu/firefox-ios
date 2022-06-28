@@ -2194,6 +2194,12 @@
 /* The placeholder text for the tab search bar */
 "Tabs.Search.PlaceholderText" = "검색 탭";
 
+/* Accessibility title for the inactive tabs section button when section is closed. This section groups all tabs that haven't been used in a while. */
+"TabsTray.InactiveTabs.SectionTitle.Closed.Accessibility.v103" = "비활성 탭 보기";
+
+/* Accessibility title for the inactive tabs section button when section is open. This section groups all tabs that haven't been used in a while. */
+"TabsTray.InactiveTabs.SectionTitle.Opened.Accessibility.v103" = "비활성 탭 숨기기";
+
 /* Accessibility label for the Add Tab button in the Tab Tray. */
 "TabTray.AddTab.Button" = "탭 추가";
 
