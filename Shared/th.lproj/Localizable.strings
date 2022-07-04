@@ -2188,6 +2188,12 @@
 /* The placeholder text for the tab search bar */
 "Tabs.Search.PlaceholderText" = "ค้นหาแท็บ";
 
+/* Accessibility title for the inactive tabs section button when section is closed. This section groups all tabs that haven't been used in a while. */
+"TabsTray.InactiveTabs.SectionTitle.Closed.Accessibility.v103" = "ดูแท็บที่ไม่ใช้งาน";
+
+/* Accessibility title for the inactive tabs section button when section is open. This section groups all tabs that haven't been used in a while. */
+"TabsTray.InactiveTabs.SectionTitle.Opened.Accessibility.v103" = "ซ่อนแท็บที่ไม่ใช้งาน";
+
 /* Accessibility label for the Add Tab button in the Tab Tray. */
 "TabTray.AddTab.Button" = "เพิ่มแท็บ";
 
