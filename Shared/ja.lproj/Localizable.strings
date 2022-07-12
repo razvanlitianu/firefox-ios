@@ -1893,6 +1893,12 @@
 /* Message shown when you enter Passwords screen for the first time. It explains how password are protected in the Firefox for iOS application. */
 "Settings.Passwords.OnboardingMessage.v103" = "あなたのパスワードが Face ID または Touch ID、端末のパスコードにより保護されるようになりました。";
 
+/* Setting that appears in the Passwords screen to enable the built-in password manager so users can save their passwords. */
+"Settings.Passwords.SavePasswords.v103" = "パスワードを保存する";
+
+/* Title for the passwords screen. */
+"Settings.Passwords.Title.v103" = "パスワード";
+
 /* Setting to enable the built-in password manager */
 "Settings.SaveLogins.Title" = "ログイン情報を保存";
 
@@ -1958,6 +1964,9 @@
 
 /* Label used as a toggle item in Settings. When this is off, the user is opting out of all studies. */
 "Settings.Studies.Toggle.Title" = "調査";
+
+/* Ddescription that appears in the settings screen to explain what Firefox Sync is useful for. */
+"Settings.Sync.ButtonDescription.v103" = "ログインしてタブやブックマーク、パスワードなどを同期しましょう。";
 
 /* Button label that appears in the settings to prompt the user to sign in to Firefox for iOS sync service to sync and save data. */
 "Settings.Sync.ButtonTitle.v103" = "同期してデータを保存";
