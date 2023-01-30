@@ -1222,6 +1222,9 @@
 /* The placeholder for URL Field when saving a custom search engine */
 "Settings.AddCustomEngine.URLPlaceholder" = "URL (Korvaa kysely merkeillä %s)";
 
+/* Label used as an item in Settings screen. When touched, it will take user to credit card settings page to that will allows to add or modify saved credit cards to allow for autofill in a webpage. */
+"Settings.AutofillCreditCard.Title.v110" = "Täytä luottokortit automaattisesti";
+
 /* Button in Data Management that clears all items. */
 "Settings.ClearAllWebsiteData.Clear.Button" = "Poista kaikki sivustojen tiedot";
 
@@ -1601,7 +1604,7 @@
 "Settings.TrackingProtection.ProtectionLevelStandard.Description" = "Salli joitain seuraimia, jotta sivustot toimivat oikein.";
 
 /* Description for strict level tracker protection */
-"Settings.TrackingProtection.ProtectionLevelStrict.Description" = "Estää enemmän seuraimia, mainoksia ja ponnahdusikkunoita. Sivut latautuvat nopeammin, mutta jotkut toiminnot eivät välttämättä toimi.";
+"Settings.TrackingProtection.ProtectionLevelStrict.Description" = "Estää enemmän seuraimia, mainoksia ja ponnahdusikkunoita. Sivut latautuvat nopeammin, mutta jotkin toiminnot eivät välttämättä toimi.";
 
 /* Title for tracking protection options section where level can be selected. */
 "Settings.TrackingProtection.ProtectionLevelTitle" = "Suojaustaso";
