@@ -222,6 +222,27 @@ enum Route: Equatable {
             TelemetryWrapper.recordEvent(category: .action, method: .open, object: .largeTabsOpenUrl)
         }
     }
+
+    init?(shortcutItem: UIApplicationShortcutItem) {
+        guard let shortcutTypeRaw = shortcutItem.type.components(separatedBy: ".").last,
+              let shortcutType = DeeplinkInput.Shortcut(rawValue: shortcutTypeRaw)
+        else { return nil }
+
+        switch shortcutType {
+        case .newTab:
+            self = .search(url: nil, isPrivate: false)
+        case .newPrivateTab:
+            self = .search(url: nil, isPrivate: true)
+        case .openLastBookmark:
+            if let urlToOpen = (shortcutItem.userInfo?[QuickActionInfos.tabURLKey] as? String)?.asURL {
+                self = .search(url: urlToOpen, isPrivate: false)
+            } else {
+                return nil
+            }
+        case .qrCode:
+            self = .action(action: .showQRCode)
+        }
+    }
 }
 
 public extension URL {

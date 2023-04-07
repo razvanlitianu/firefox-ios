@@ -819,6 +819,7 @@
 		C87DF976267246830097E707 /* LegacyThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A179820E69A7E00B12184 /* LegacyThemeManager.swift */; };
 		C87DF98A2672468F0097E707 /* LegacyDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A179920E69A7E00B12184 /* LegacyDarkTheme.swift */; };
 		C87DF9DB267247190097E707 /* UIConstants+BottomInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87DF9DA267247190097E707 /* UIConstants+BottomInset.swift */; };
+		C8892D7629E04A49002FADB2 /* ShortcutRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8892D7529E04A49002FADB2 /* ShortcutRouteTests.swift */; };
 		C889569A27E8D1AC00E3779E /* InactiveTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C889569927E8D1AC00E3779E /* InactiveTabHeader.swift */; };
 		C889D7CE2858C4B500121E1D /* ContextMenuHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C889D7CD2858C4B500121E1D /* ContextMenuHelperTests.swift */; };
 		C889D7D52858CD8800121E1D /* HistoryHighlightsTestEntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C889D7D42858CD8800121E1D /* HistoryHighlightsTestEntryProvider.swift */; };
@@ -4632,6 +4633,7 @@
 		C87DC85B27B2C94D006EFCE2 /* LegacyWallpaperResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyWallpaperResourceManager.swift; sourceTree = "<group>"; };
 		C87DF9DA267247190097E707 /* UIConstants+BottomInset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIConstants+BottomInset.swift"; sourceTree = "<group>"; };
 		C88847109E62D581C497BB8E /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/AuthenticationManager.strings"; sourceTree = "<group>"; };
+		C8892D7529E04A49002FADB2 /* ShortcutRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutRouteTests.swift; sourceTree = "<group>"; };
 		C889569927E8D1AC00E3779E /* InactiveTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveTabHeader.swift; sourceTree = "<group>"; };
 		C889D7CD2858C4B500121E1D /* ContextMenuHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuHelperTests.swift; sourceTree = "<group>"; };
 		C889D7D42858CD8800121E1D /* HistoryHighlightsTestEntryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryHighlightsTestEntryProvider.swift; sourceTree = "<group>"; };
@@ -7045,6 +7047,7 @@
 				8A93F86429D37331004159D9 /* DefaultRouterTests.swift */,
 				8A93F86929D37FC9004159D9 /* CoordinatorTests.swift */,
 				C8EDDBEF29DD83FC003A4C07 /* RouteTests.swift */,
+				C8892D7529E04A49002FADB2 /* ShortcutRouteTests.swift */,
 				8A7A26E229D4ACF300EA76F1 /* SceneCoordinatorTests.swift */,
 			);
 			path = Coordinators;
@@ -10587,6 +10590,7 @@
 				2FA436421ABB8448008031D1 /* TokenServerClientTests.swift in Sources */,
 				2FA436401ABB8448008031D1 /* HawkHelperTests.swift in Sources */,
 				BA6E3BF4B5AC115E7DBCAA5E /* FxATelemtryTests.swift in Sources */,
+				C8892D7629E04A49002FADB2 /* ShortcutRouteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
