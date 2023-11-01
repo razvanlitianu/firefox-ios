@@ -45,6 +45,8 @@ struct ProductAnalysisData: Codable {
 
     var reportProductInStockCardVisible: Bool { isProductDeleted }
 
+    var infoComingSoonCardVisible: Bool { isProductDeletedReported }
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         productId = try container.decodeIfPresent(String.self, forKey: .productId)
