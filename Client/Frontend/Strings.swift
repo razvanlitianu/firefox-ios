@@ -3996,6 +3996,16 @@ extension String {
             tableName: "Shopping",
             value: "Report Product Back in Stock",
             comment: "Primary action label when encouraging users to report a product back in stock")
+        public static let InfoCardReportSubmittedByCurrentUserTitle = MZLocalizedString(
+            key: "", // Shopping.InfoCard.ReportSubmittedByCurrentUser.Title.v121
+            tableName: "Shopping",
+            value: "Thanks for Reporting!",
+            comment: "Title for info card when a report is submitted by the current user")
+        public static let InfoCardReportSubmittedByCurrentUserDescription = MZLocalizedString(
+            key: "", // Shopping.InfoCard.ReportSubmittedByCurrentUser.Description.v121
+            tableName: "Shopping",
+            value: "We should have info about this product’s reviews within 24 hours. Please check back.",
+            comment: "Description for info card when a report is submitted by the current user")
     }
 }
 
