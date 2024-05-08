@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 16px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      form {
+        display: grid;
+        input,
+        textarea,
+        select {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          height: 22px;
+
+          border: 0;
+          border-radius: 0;
+          appearance: none;
+          -webkit-appearance: none;
+          outline: none;
+          background-color: transparent;
+          color: #15141a;
+        }
+
+        label {
+          position: relative;
+          height: 68px;
+          background-color: transparent;
+          border-bottom: 1px solid #e0e0e6;
+
+          span {
+            font-size: 14px;
+            position: absolute;
+            top: 0.2em;
+            left: 0;
+            inset-block-start: 10px;
+            color: #5b5b66;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label id="name-container" class="container new-line">
+        <input type="text" id="name" name="name" />
+        <span class="label-text">Name</span>
+      </label>
+      <label id="address-level1-container" class="container">
+        <select id="address-level1" name="address-level1" required="">
+          <option value="AL">Alabama</option>
+          <option value="DC">District of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="GU">Guam</option>
+          <option value="HI">Hawaii</option>
+        </select>
+        <span class="label-text">State</span>
+      </label>
+    </form>
+  </body>
+</html>

@@ -22,6 +22,10 @@ const AutofillAllFramesAtDocumentStart = glob.sync(
   "./firefox-ios/Client/Frontend/UserContent/UserScripts/AllFrames/AutofillAtDocumentStart/*.{js,mjs}"
 );
 
+const AddressManageForm = glob.sync(
+  "./firefox-ios/Client/Frontend/UserContent/UserScripts/AddressManageForm/*.{js,mjs}"
+);
+
 // Ensure the first script loaded at document start is __firefox__.js
 // since it defines the `window.__firefox__` global.
 const needsFirefoxFile = {
@@ -66,8 +70,8 @@ module.exports = {
     MainFrameAtDocumentEnd,
     WebcompatAllFramesAtDocumentStart,
     AutofillAllFramesAtDocumentStart,
+    AddressManageForm,
   },
-  // optimization: { minimize: false }, // use for debugging
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "firefox-ios/Client/Assets"),

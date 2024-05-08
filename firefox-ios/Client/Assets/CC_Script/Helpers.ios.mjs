@@ -5,6 +5,8 @@
 import { IOSAppConstants } from "resource://gre/modules/shared/Constants.ios.mjs";
 import Overrides from "resource://gre/modules/Overrides.ios.js";
 
+console.log("WWWWWWWWWW ........ hereeeee ????");
+
 /* eslint mozilla/use-isInstance: 0 */
 HTMLSelectElement.isInstance = element => element instanceof HTMLSelectElement;
 HTMLInputElement.isInstance = element => element instanceof HTMLInputElement;

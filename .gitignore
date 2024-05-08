@@ -98,6 +98,7 @@ firefox-ios/Client/Assets/MainFrameAtDocumentStart.js
 firefox-ios/Client/Assets/MainFrameAtDocumentEnd.js
 firefox-ios/Client/Assets/AutofillAllFramesAtDocumentStart.js
 firefox-ios/Client/Assets/WebcompatAllFramesAtDocumentStart.js
+firefox-ios/Client/Assets/addressFormLayout.js
 firefox-ios/Client/Assets/*.js.LICENSE.txt
 
 # L10n
