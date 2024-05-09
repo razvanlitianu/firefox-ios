@@ -38,7 +38,7 @@ struct AddressAutofillSettingsView: View {
                     .frame(maxWidth: .infinity)
 
                 // Address list view
-                AddressListView(windowUUID: windowUUID, viewModel: addressListViewModel )
+                AddressListView(windowUUID: windowUUID, viewModel: addressListViewModel)
             }
             .background(viewBackground)
             .onAppear {
