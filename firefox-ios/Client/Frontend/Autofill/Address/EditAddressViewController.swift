@@ -15,9 +15,9 @@ class EditAddressViewController: UIViewController, WKNavigationDelegate, WKScrip
         return webView
     }()
 
-    var model: EditAddressWebModel
+    var model: AddressListViewModel
 
-    init(model: EditAddressWebModel) {
+    init(model: AddressListViewModel) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
     }
@@ -33,7 +33,6 @@ class EditAddressViewController: UIViewController, WKNavigationDelegate, WKScrip
 
     private func setupWebView() {
         model.saveAddressAction = { [weak self] in
-//            self?.evaluateJavaScript("getFormDataAndPost();")
         }
 
         model.toggleEditModeAction = { [weak self] in
@@ -61,19 +60,6 @@ class EditAddressViewController: UIViewController, WKNavigationDelegate, WKScrip
 //    }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-//        let jsonData = try? JSONSerialization.data(withJSONObject: data, options: [])
-//        guard let jsonString = String(data: jsonData!, encoding: .utf8) else { return }
-//
-//        let script = """
-//                    init(\(jsonString));
-//                    """
-
-//        webView.evaluateJavaScript(script) { result, error in
-//            if let error = error {
-//                print("JavaScript Injection Error: \(error.localizedDescription)")
-//            }
-//        }
-
         let address = model.selectedAddress ?? model.addAddress ?? .empty
         injectJSONData(address, withFunction: "init")
     }
@@ -106,7 +92,7 @@ class EditAddressViewController: UIViewController, WKNavigationDelegate, WKScrip
 struct EditAddressViewControllerRepresentable: UIViewControllerRepresentable {
     typealias UIViewControllerType = EditAddressViewController
 
-    var model: EditAddressWebModel
+    var model: AddressListViewModel
 
     func makeUIViewController(context: Context) -> EditAddressViewController {
         let webViewController = EditAddressViewController(model: model)

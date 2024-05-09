@@ -26,9 +26,25 @@ class AddressListViewModel: ObservableObject {
 
     @Published var addresses: [Address] = []
     @Published var showSection = false
+    @Published var selectedAddress: Address?
+    @Published var addAddress: Address?
+    @Published var isEditMode = false
+
     private let profile: Profile?
     private let logger: Logger
+
     var addressSelectionCallback: ((UnencryptedAddressFields) -> Void)?
+    var saveAddressAction: (() -> Void)?
+    var toggleEditModeAction: (() -> Void)?
+
+    func saveAddress(completion: (Address) -> Void) {
+        saveAddressAction?()
+    }
+
+    func toggleEditMode() {
+        isEditMode.toggle()
+        toggleEditModeAction?()
+    }
 
     // MARK: - Initializer
 

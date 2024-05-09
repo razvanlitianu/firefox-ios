@@ -266,6 +266,36 @@ extension String {
                 tableName: "Settings",
                 value: "Use saved address",
                 comment: "Displayed inside the keyboard hint when a user is entering their address and has at least one saved address. Indicates that there are stored addresses available for use in filling out a form.")
+            public static let EditAddressTitle = MZLocalizedString(
+                key: "", // Addresses.Settings.EditAddressSectionTitle.v127
+                tableName: "Settings",
+                value: "Edit Address",
+                comment: "This string is used as the title for the section where users can edit an existing address in the settings menu.")
+            public static let AddAddressTitle = MZLocalizedString(
+                key: "", // Addresses.Settings.AddingAddressesSectionTitle.v127
+                tableName: "Settings",
+                value: "Add Address",
+                comment: "This string is used as the title for the screen where users can add a new address in the settings menu.")
+            public static let CloseNavBarButtonLabel = MZLocalizedString(
+                key: "", // Addresses.Settings.CloseNavBarButtonLabel.v127
+                tableName: "Settings",
+                value: "Close",
+                comment: "Button label for closing the view where user can view their address info")
+            public static let SaveNavBarButtonLabel = MZLocalizedString(
+                key: "", // Addresses.Settings.SaveNavBarButtonLabel.v127
+                tableName: "Settings",
+                value: "Save",
+                comment: "Button label for saving the address details user entered in the form")
+            public static let EditNavBarButtonLabel = MZLocalizedString(
+                key: "", // Addresses.Settings.EditNavBarButtonLabel.v127
+                tableName: "Settings",
+                value: "Edit",
+                comment: "Button label for editing the address details shown in the form")
+            public static let CancelNavBarButtonLabel = MZLocalizedString(
+                key: "", // Addresses.Settings.CancelNavBarButtonLabel.v127
+                tableName: "Settings",
+                value: "Cancel",
+                comment: "Button label for cancelling editing of the address details shown in the form")
         }
         public struct BottomSheet {
             public static let UseASavedAddress = MZLocalizedString(

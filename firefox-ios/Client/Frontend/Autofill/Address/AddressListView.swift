@@ -8,110 +8,6 @@ import Shared
 import Storage
 import WebKit
 
-//struct WebView: UIViewRepresentable {
-//    let address: [String: Any]
-//    @Binding var webView: WKWebView?
-//
-//    func makeUIView(context: Context) -> WKWebView {
-//        let webView = WKWebView()
-//        webView.navigationDelegate = context.coordinator
-//        self._webView.wrappedValue = webView
-//        return webView
-//    }
-//
-//    func updateUIView(_ webView: WKWebView, context: Context) {
-//        let url = Bundle.main.url(forResource: "AddressManageForm", withExtension: "html")!
-//        // TODO: Let's put everything in a subdir so we don't give access to any files
-//        // We don't need to.
-//        webView.loadFileURL(url, allowingReadAccessTo: url)
-//        let request = URLRequest(url: url)
-//        webView.load(request)
-//    }
-//
-//    func makeCoordinator() -> WebViewCoordinator {
-//        return WebViewCoordinator(data: address)
-//    }
-//
-//    class WebViewCoordinator: NSObject, WKNavigationDelegate {
-//            let data: [String: Any]
-//
-//            init(data: [String: Any]) {
-//                self.data = data
-//            }
-//
-//            func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-//                let jsonData = try? JSONSerialization.data(withJSONObject: data, options: [])
-//                guard let jsonString = String(data: jsonData!, encoding: .utf8) else { return }
-//
-//                let script = """
-//                init(\(jsonString));
-//                """
-//
-//                webView.evaluateJavaScript(script) { result, error in
-//                    if let error = error {
-//                        print("JavaScript Injection Error: \(error.localizedDescription)")
-//                    }
-//                }
-//            }
-//        }
-//}
-
-class EditAddressWebModel: ObservableObject {
-    @Published var selectedAddress: Address?
-    @Published var addAddress: Address?
-    @Published var isEditMode: Bool = false
-    var saveAddressAction: (() -> Void)?
-    var toggleEditModeAction: (() -> Void)?
-    func saveAddress(completion: (Address) -> Void) {
-        saveAddressAction?()
-    }
-
-    func toggleEditMode() {
-        isEditMode.toggle()
-        toggleEditModeAction?()
-    }
-}
-
-//struct WebViewWithControls: View {
-//    @Environment(\.presentationMode) 
-//    var presentationMode
-//    var address: [String: Any]
-//    @Binding var webView: WKWebView?
-//    init(address: [String: Any], webView: Binding<WKWebView?>) {
-//            self.address = address
-//            self._webView = webView
-//    }
-//
-//    var body: some View {
-//        VStack {
-//            HStack {
-//                Button("Cancel") {
-//                    presentationMode.wrappedValue.dismiss()
-//                }
-//                Spacer()
-//                Button("Edit") {
-//                    guard let webView = webView else {
-//                                print("WebView is not available")
-//                                return
-//                    }
-//                    let script = "toggleEditMode()"
-//                    webView.evaluateJavaScript(script) { result, error in
-//                        if let error = error {
-//                            print("JavaScript Injection Error: \(error)")
-//                        }
-//                    }
-//
-//                }
-//            }
-//            .padding()
-//            .background(Color.gray.opacity(0.2))
-//
-//        WebView(address: address, webView: $webView)
-//                .edgesIgnoringSafeArea(.bottom)
-//        }
-//    }
-//}
-
 // MARK: - AddressListView
 
 /// A view displaying a list of addresses.
@@ -124,7 +20,6 @@ struct AddressListView: View {
     @ObservedObject var viewModel: AddressListViewModel
     @State private var customLightGray: Color = .clear
     @State private var webView: WKWebView?
-    @StateObject var model = EditAddressWebModel()
 
     // MARK: - Body
 
@@ -136,7 +31,7 @@ struct AddressListView: View {
                         AddressCellView(
                             windowUUID: windowUUID,
                             address: address,
-                            onTap: { model.selectedAddress = address }
+                            onTap: { viewModel.selectedAddress = address }
                         )
                     }
                 }
@@ -146,52 +41,48 @@ struct AddressListView: View {
         }
         .listStyle(.plain)
         .listRowInsets(EdgeInsets())
-        .sheet(item: $model.selectedAddress) { address in
+        .sheet(item: $viewModel.selectedAddress) { address in
             NavigationView {
-                EditAddressViewControllerRepresentable(model: model)
-                    .navigationBarTitle("Edit Address", displayMode: .inline)
+                EditAddressViewControllerRepresentable(model: viewModel)
+                    .navigationBarTitle(String.Addresses.Settings.EditAddressTitle, displayMode: .inline)
                     .toolbar {
-                        ToolbarItemGroup(placement: .navigation) {
-                            if model.isEditMode {
-                                Button("Cancel") {
-                                    model.toggleEditMode()
+                        ToolbarItemGroup(placement: .cancellationAction) {
+                            if viewModel.isEditMode {
+                                Button(String.Addresses.Settings.CancelNavBarButtonLabel) {
+                                    viewModel.toggleEditMode()
                                 }
                             } else {
-                                Button("Close") {
-                                    model.selectedAddress = nil
+                                Button(String.Addresses.Settings.CloseNavBarButtonLabel) {
+                                    viewModel.selectedAddress = nil
                                 }
                             }
+                        }
 
-                            Spacer()
-
-                            if model.isEditMode {
-                                Button("Save") {
-                                    model.saveAddress { _ in
-
-                                    }
-                                    model.toggleEditMode()
+                        ToolbarItemGroup(placement: .primaryAction) {
+                            if viewModel.isEditMode {
+                                Button(String.Addresses.Settings.SaveNavBarButtonLabel) {
+                                    viewModel.saveAddress { _ in }
+                                    viewModel.toggleEditMode()
                                 }
                             } else {
-                                Button("Edit") {
-                                    model.toggleEditMode()
+                                Button(String.Addresses.Settings.EditNavBarButtonLabel) {
+                                    viewModel.toggleEditMode()
                                 }
                             }
                         }
                     }
             }
         }
-        .sheet(item: $model.addAddress) { address in
+        .sheet(item: $viewModel.addAddress) { address in
             NavigationView {
-                EditAddressViewControllerRepresentable(model: model)
-                    .navigationBarTitle("Add Address", displayMode: .inline)
+                EditAddressViewControllerRepresentable(model: viewModel)
+                    .navigationBarTitle(String.Addresses.Settings.AddAddressTitle, displayMode: .inline)
                     .navigationBarItems(
-                        leading: Button("Cancel") {
-                            // Action to perform when Cancel is tapped
-                            model.addAddress = nil
+                        leading: Button(String.Addresses.Settings.CloseNavBarButtonLabel) {
+                            viewModel.addAddress = nil
                         },
-                        trailing: Button("Save") {
-                            // Action to perform when Save is tapped
-                            model.saveAddress(completion: { _ in })
+                        trailing: Button(String.Addresses.Settings.SaveNavBarButtonLabel) {
+                            viewModel.saveAddress(completion: { _ in })
                         }
                     )
             }
