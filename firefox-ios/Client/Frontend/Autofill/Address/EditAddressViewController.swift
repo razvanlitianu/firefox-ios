@@ -35,8 +35,8 @@ class EditAddressViewController: UIViewController, WKNavigationDelegate, WKScrip
         model.saveAddressAction = { [weak self] in
         }
 
-        model.toggleEditModeAction = { [weak self] in
-            self?.evaluateJavaScript("toggleEditMode();")
+        model.toggleEditModeAction = { [weak self] isEditMode in
+            self?.evaluateJavaScript("toggleEditMode(\(isEditMode));")
         }
 
         if let url = Bundle.main.url(forResource: "AddressManageForm", withExtension: "html") {

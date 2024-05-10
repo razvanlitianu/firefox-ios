@@ -35,7 +35,7 @@ class AddressListViewModel: ObservableObject {
 
     var addressSelectionCallback: ((UnencryptedAddressFields) -> Void)?
     var saveAddressAction: (() -> Void)?
-    var toggleEditModeAction: (() -> Void)?
+    var toggleEditModeAction: ((Bool) -> Void)?
 
     func saveAddress(completion: (Address) -> Void) {
         saveAddressAction?()
@@ -43,7 +43,7 @@ class AddressListViewModel: ObservableObject {
 
     func toggleEditMode() {
         isEditMode.toggle()
-        toggleEditModeAction?()
+        toggleEditModeAction?(isEditMode)
     }
 
     // MARK: - Initializer
