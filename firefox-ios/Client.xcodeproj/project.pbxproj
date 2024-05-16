@@ -881,6 +881,9 @@
 		8C1953302B85E7EC00761B20 /* AutofillFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19532F2B85E7EC00761B20 /* AutofillFooterView.swift */; };
 		8C1953322B85EAB500761B20 /* AutofillHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1953312B85EAB500761B20 /* AutofillHeaderView.swift */; };
 		8C29627C2B1F473800571655 /* AdEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29627B2B1F473800571655 /* AdEventsResponse.swift */; };
+		8C3AC9462BF4E4210054E38D /* AddressFormManager.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C3AC9422BF4E4210054E38D /* AddressFormManager.css */; };
+		8C3AC9472BF4E4210054E38D /* AddressFormManager.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C3AC9432BF4E4210054E38D /* AddressFormManager.html */; };
+		8C3AC9482BF4E4210054E38D /* AddressFormManager.mjs in Resources */ = {isa = PBXBuildFile; fileRef = 8C3AC9442BF4E4210054E38D /* AddressFormManager.mjs */; };
 		8C44A9D22A6A99FE009A1AA7 /* ShoppingProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C44A9D12A6A99FE009A1AA7 /* ShoppingProduct.swift */; };
 		8C46E1B72B2209F000F56521 /* FakespotAdsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C46E1B62B2209F000F56521 /* FakespotAdsEvent.swift */; };
 		8C6F94652A972EB300415FF6 /* FakespotAdjustRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F94632A972EB300415FF6 /* FakespotAdjustRatingView.swift */; };
@@ -999,9 +1002,6 @@
 		B640467E29B9B58200C5C7B6 /* TabLocationViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640467D29B9B58200C5C7B6 /* TabLocationViewTests.swift */; };
 		BA1C68BA2B7E9EA0000D9397 /* WKFrameInfoExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1C68B92B7E9EA0000D9397 /* WKFrameInfoExtensionsTest.swift */; };
 		BA1C68BC2B7ED153000D9397 /* MockWebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1C68BB2B7ED153000D9397 /* MockWebKit.swift */; };
-		BA8E197F2BF2FB1900590B5F /* AddressFormManager.js in Resources */ = {isa = PBXBuildFile; fileRef = BA8E197E2BF2FB1900590B5F /* AddressFormManager.js */; };
-		BA8E19812BF2FB4100590B5F /* AddressFormManager.html in Resources */ = {isa = PBXBuildFile; fileRef = BA8E19802BF2FB4100590B5F /* AddressFormManager.html */; };
-		BA8E19832BF2FB5B00590B5F /* AddressFormManager.css in Resources */ = {isa = PBXBuildFile; fileRef = BA8E19822BF2FB5B00590B5F /* AddressFormManager.css */; };
 		BC003F5E2B59F44600929ECB /* BrowserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC003F5D2B59F44500929ECB /* BrowserViewControllerTests.swift */; };
 		BCFF93EE2AAA9F6E005B5B71 /* RustFirefoxSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF93ED2AAA9C47005B5B71 /* RustFirefoxSuggest.swift */; };
 		BCFF93F02AABA55A005B5B71 /* BackgroundFirefoxSuggestIngestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF93EF2AAB97A8005B5B71 /* BackgroundFirefoxSuggestIngestUtility.swift */; };
@@ -6086,6 +6086,9 @@
 		8C1953312B85EAB500761B20 /* AutofillHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutofillHeaderView.swift; sourceTree = "<group>"; };
 		8C264BF5A1C7B2B6378D4DFF /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/Today.strings; sourceTree = "<group>"; };
 		8C29627B2B1F473800571655 /* AdEventsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdEventsResponse.swift; sourceTree = "<group>"; };
+		8C3AC9422BF4E4210054E38D /* AddressFormManager.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = AddressFormManager.css; sourceTree = "<group>"; };
+		8C3AC9432BF4E4210054E38D /* AddressFormManager.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AddressFormManager.html; sourceTree = "<group>"; };
+		8C3AC9442BF4E4210054E38D /* AddressFormManager.mjs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AddressFormManager.mjs; sourceTree = "<group>"; };
 		8C44A9D12A6A99FE009A1AA7 /* ShoppingProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingProduct.swift; sourceTree = "<group>"; };
 		8C46E1B62B2209F000F56521 /* FakespotAdsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakespotAdsEvent.swift; sourceTree = "<group>"; };
 		8C514AFEABEF8DE46CE7B8D4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AuthenticationManager.strings; sourceTree = "<group>"; };
@@ -6558,9 +6561,6 @@
 		BA1C68B92B7E9EA0000D9397 /* WKFrameInfoExtensionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKFrameInfoExtensionsTest.swift; sourceTree = "<group>"; };
 		BA1C68BB2B7ED153000D9397 /* MockWebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebKit.swift; sourceTree = "<group>"; };
 		BA354251BD3FFF63A161E385 /* is */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = is; path = is.lproj/ClearHistoryConfirm.strings; sourceTree = "<group>"; };
-		BA8E197E2BF2FB1900590B5F /* AddressFormManager.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = AddressFormManager.js; path = Client/Assets/AddressFormManager.js; sourceTree = "<group>"; };
-		BA8E19802BF2FB4100590B5F /* AddressFormManager.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = AddressFormManager.html; path = Client/Frontend/UserContent/UserScripts/AddressFormManager/AddressFormManager.html; sourceTree = "<group>"; };
-		BA8E19822BF2FB5B00590B5F /* AddressFormManager.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = AddressFormManager.css; path = Client/Frontend/UserContent/UserScripts/AddressFormManager/AddressFormManager.css; sourceTree = "<group>"; };
 		BA904A3B89BC820A7A802D55 /* es-CL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CL"; path = "es-CL.lproj/Storage.strings"; sourceTree = "<group>"; };
 		BAA64356B54F1CD258764620 /* su */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = su; path = su.lproj/FindInPage.strings; sourceTree = "<group>"; };
 		BAF14FEC94CB9DA4E08BA60C /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Storage.strings; sourceTree = "<group>"; };
@@ -10029,6 +10029,16 @@
 			path = LaunchView;
 			sourceTree = "<group>";
 		};
+		8C3AC9452BF4E4210054E38D /* AddressFormManager */ = {
+			isa = PBXGroup;
+			children = (
+				8C3AC9422BF4E4210054E38D /* AddressFormManager.css */,
+				8C3AC9432BF4E4210054E38D /* AddressFormManager.html */,
+				8C3AC9442BF4E4210054E38D /* AddressFormManager.mjs */,
+			);
+			path = AddressFormManager;
+			sourceTree = "<group>";
+		};
 		8C802EE12B078BB30059E78D /* Response */ = {
 			isa = PBXGroup;
 			children = (
@@ -10815,6 +10825,7 @@
 		D0FCF7E71FE44CA9004A7995 /* UserScripts */ = {
 			isa = PBXGroup;
 			children = (
+				8C3AC9452BF4E4210054E38D /* AddressFormManager */,
 				D0FCF7E81FE44D8F004A7995 /* AllFrames */,
 				8AEE62C82756BA34003207D1 /* DownloadHelper.js */,
 				8AEE62C62756BA34003207D1 /* LoginsHelper.js */,
@@ -11342,7 +11353,6 @@
 			children = (
 				E177989B2BD7D48500F6F0EB /* ToolbarAction.swift */,
 				E177989D2BD7D75A00F6F0EB /* ToolbarMiddleware.swift */,
-				E1DE2F822BE394E10054BCDC /* ToolbarModel.swift */,
 				E17798992BD7D44200F6F0EB /* ToolbarState.swift */,
 			);
 			path = Redux;
@@ -11742,9 +11752,6 @@
 		F84B21B51A090F8100AAB793 = {
 			isa = PBXGroup;
 			children = (
-				BA8E19822BF2FB5B00590B5F /* AddressFormManager.css */,
-				BA8E19802BF2FB4100590B5F /* AddressFormManager.html */,
-				BA8E197E2BF2FB1900590B5F /* AddressFormManager.js */,
 				2FA435FC1ABB83B4008031D1 /* Account */,
 				D4F0C2642B2C90FB008ECEE8 /* BrowserKit */,
 				F84B21C01A090F8100AAB793 /* Client */,
@@ -13006,9 +13013,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8E19832BF2FB5B00590B5F /* AddressFormManager.css in Resources */,
-				BA8E19812BF2FB4100590B5F /* AddressFormManager.html in Resources */,
-				BA8E197F2BF2FB1900590B5F /* AddressFormManager.js in Resources */,
 				8A1A935B2B757C7C0069C190 /* wave.json in Resources */,
 				D4AFAB0E2AFA8F9A000BFEAA /* SyncIntegrationTests in Resources */,
 				43F92B3829E9F52B000C0F17 /* AutofillAllFramesAtDocumentStart.js in Resources */,
@@ -13023,6 +13027,7 @@
 				3BC659491E5BA4AE006D560F /* TopSites in Resources */,
 				F84B220B1A0910F600AAB793 /* Images.xcassets in Resources */,
 				8A3345692BA499B7008C52AB /* disconnect-block-cookies-social.json in Resources */,
+				8C3AC9472BF4E4210054E38D /* AddressFormManager.html in Resources */,
 				8A3345682BA499B7008C52AB /* disconnect-block-social.json in Resources */,
 				4336FAD2264B169000A6B076 /* WebcompatAllFramesAtDocumentStart.js in Resources */,
 				23BEA767251A99ED00A014BF /* NewYorkMedium-Bold.otf in Resources */,
@@ -13031,6 +13036,7 @@
 				E1BDAC832B9F65780063E6BF /* reportSiteIssueOff.json in Resources */,
 				E1AF3563286DE5F800960045 /* FullFunctionalTestPlan.xctestplan in Resources */,
 				8A3345642BA499B7008C52AB /* disconnect-block-analytics.json in Resources */,
+				8C3AC9462BF4E4210054E38D /* AddressFormManager.css in Resources */,
 				E1AF3567286DE5F800960045 /* PerformanceTestPlan.xctestplan in Resources */,
 				8A1A935A2B757C7C0069C190 /* portrait.json in Resources */,
 				23BEA76A251A99ED00A014BF /* NewYorkMedium-RegularItalic.otf in Resources */,
@@ -13072,6 +13078,7 @@
 				8A2B1A5E28216C4D0061216B /* Common.xcconfig in Resources */,
 				39A35AED1C0662A3006B9E87 /* SpotlightHelper.js in Resources */,
 				D0FCF8071FE4772D004A7995 /* MainFrameAtDocumentEnd.js in Resources */,
+				8C3AC9482BF4E4210054E38D /* AddressFormManager.mjs in Resources */,
 				E4D6BEB91A0930EC00F538BD /* LaunchScreen.xib in Resources */,
 				23BEA769251A99ED00A014BF /* NewYorkMedium-Regular.otf in Resources */,
 				8A3345622BA499B7008C52AB /* disconnect-block-advertising.json in Resources */,
