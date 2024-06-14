@@ -15,7 +15,7 @@ class TabPeekViewController: UIViewController,
     var contextActions: UIContextMenuActionProvider = { _ in return nil }
     private let windowUUID: WindowUUID
 
-    private var tab: TabModel
+    private var tabInstance: TabModel
 
     func contextActions(defaultActions: [UIMenuElement]) -> UIMenu {
         return makeMenuActions()
@@ -25,12 +25,12 @@ class TabPeekViewController: UIViewController,
 
     init(tab: TabModel, windowUUID: WindowUUID) {
         tabPeekState = TabPeekState(windowUUID: windowUUID)
-        self.tab = tab
+        self.tabInstance = tab
         self.windowUUID = windowUUID
         super.init(nibName: nil, bundle: nil)
 
         subscribeToRedux()
-        let action = TabPeekAction(tabUUID: tab.tabUUID,
+        let action = TabPeekAction(tabUUID: tabInstance.tabUUID,
                                    windowUUID: windowUUID,
                                    actionType: TabPeekActionType.didLoadTabPeek)
         store.dispatch(action)
@@ -100,7 +100,7 @@ class TabPeekViewController: UIViewController,
                                     image: UIImage.templateImageNamed(StandardImageIdentifiers.Large.bookmark),
                                     identifier: nil) { [weak self] _ in
                 guard let self else { return }
-                let action = TabPeekAction(tabUUID: self.tab.tabUUID,
+                let action = TabPeekAction(tabUUID: self.tabInstance.tabUUID,
                                            windowUUID: self.windowUUID,
                                            actionType: TabPeekActionType.addToBookmarks)
                 store.dispatch(action)
@@ -113,7 +113,7 @@ class TabPeekViewController: UIViewController,
                 image: UIImage.templateImageNamed(StandardImageIdentifiers.Large.shareApple),
                 identifier: nil) { [weak self] _ in
                     guard let self else { return }
-                    let action = TabPeekAction(tabUUID: self.tab.tabUUID,
+                    let action = TabPeekAction(tabUUID: self.tabInstance.tabUUID,
                                                windowUUID: self.windowUUID,
                                                actionType: TabPeekActionType.sendToDevice)
                     store.dispatch(action)
@@ -125,7 +125,7 @@ class TabPeekViewController: UIViewController,
                                     image: UIImage.templateImageNamed(StandardImageIdentifiers.Large.link),
                                     identifier: nil) { [weak self] _ in
                 guard let self else { return }
-                let action = TabPeekAction(tabUUID: self.tab.tabUUID,
+                let action = TabPeekAction(tabUUID: self.tabInstance.tabUUID,
                                            windowUUID: self.windowUUID,
                                            actionType: TabPeekActionType.copyURL)
                 store.dispatch(action)
@@ -137,7 +137,7 @@ class TabPeekViewController: UIViewController,
                                     image: UIImage.templateImageNamed(StandardImageIdentifiers.Large.cross),
                                     identifier: nil) { [weak self] _ in
                 guard let self else { return }
-                let action = TabPeekAction(tabUUID: self.tab.tabUUID,
+                let action = TabPeekAction(tabUUID: self.tabInstance.tabUUID,
                                            windowUUID: self.windowUUID,
                                            actionType: TabPeekActionType.closeTab)
                 store.dispatch(action)

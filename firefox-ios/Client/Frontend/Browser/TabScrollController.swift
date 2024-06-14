@@ -24,7 +24,7 @@ class TabScrollingController: NSObject, FeatureFlaggable, SearchBarLocationProvi
         case animating
     }
 
-    weak var tab: Tab? {
+    weak var tabInstance: Tab? {
         willSet {
             self.scrollView?.delegate = nil
             self.scrollView?.removeGestureRecognizer(panGesture)
@@ -95,7 +95,7 @@ class TabScrollingController: NSObject, FeatureFlaggable, SearchBarLocationProvi
         return panGesture
     }()
 
-    private var scrollView: UIScrollView? { return tab?.webView?.scrollView }
+    private var scrollView: UIScrollView? { return tabInstance?.webView?.scrollView }
     private var contentOffset: CGPoint { return scrollView?.contentOffset ?? .zero }
     private var scrollViewHeight: CGFloat { return scrollView?.frame.height ?? 0 }
     private var topScrollHeight: CGFloat { header?.frame.height ?? 0 }
@@ -154,7 +154,7 @@ class TabScrollingController: NSObject, FeatureFlaggable, SearchBarLocationProvi
 
         guard !tabIsLoading() else { return }
 
-        tab?.shouldScrollToTop = false
+        tabInstance?.shouldScrollToTop = false
 
         if let containerView = scrollView?.superview {
             let translation = gesture.translation(in: containerView)
@@ -271,7 +271,7 @@ private extension TabScrollingController {
 
     @objc
     func reload() {
-        guard let tab = tab else { return }
+        guard let tab = tabInstance else { return }
         tab.reloadPage()
         TelemetryWrapper.recordEvent(category: .action, method: .pull, object: .reload)
     }
@@ -281,7 +281,7 @@ private extension TabScrollingController {
     }
 
     func tabIsLoading() -> Bool {
-        return tab?.loading ?? true
+        return tabInstance?.loading ?? true
     }
 
     func isBouncingAtBottom() -> Bool {
@@ -454,7 +454,7 @@ extension TabScrollingController: UIScrollViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         guard !tabIsLoading(), !isBouncingAtBottom(), isAbleToScroll else { return }
 
-        tab?.shouldScrollToTop = false
+        tabInstance?.shouldScrollToTop = false
 
         if decelerate || (toolbarState == .animating && !decelerate) {
             if scrollDirection == .up {
@@ -469,7 +469,7 @@ extension TabScrollingController: UIScrollViewDelegate {
     // before the WKWebView's contentOffset is reset as a result of the contentView's frame becoming smaller
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // for PDFs, we should set the initial offset to 0 (ZERO)
-        if let tab, tab.shouldScrollToTop {
+        if let tabInstance, tabInstance.shouldScrollToTop {
             setOffset(y: 0, for: scrollView)
         }
 
