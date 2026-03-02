@@ -6795,6 +6795,7 @@
 		43E18BBF2A24C09100433C0C /* nn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nn; path = nn.lproj/DisplayCard.strings; sourceTree = "<group>"; };
 		43E1A3CF2CCFAC4300B4178C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FxANotification.strings; sourceTree = "<group>"; };
 		43E1A3D02CCFAC4300B4178C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/SearchEngineSelection.strings; sourceTree = "<group>"; };
+		43E1D4882F55AD1D00B94A07 /* ny */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ny; path = ny.lproj/WidgetIntents.strings; sourceTree = "<group>"; };
 		43E1D7B029FFD6B5008F2117 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Notification.strings; sourceTree = "<group>"; };
 		43E1D7B129FFD6B5008F2117 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ZoomPageBar.strings; sourceTree = "<group>"; };
 		43E1DCD82C7C9AAB008E952F /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/NativeErrorPage.strings"; sourceTree = "<group>"; };
@@ -16105,6 +16106,7 @@
 				tg,
 				"es-ES",
 				tzm,
+				ny,
 			);
 			mainGroup = F84B21B51A090F8100AAB793;
 			packageReferences = (
@@ -25288,6 +25290,7 @@
 				43E58E852D6C8B9300B07153 /* tg */,
 				435B20F02D75C47A00D1CC3A /* es-ES */,
 				433D74F72D75C5FE003D5A32 /* tzm */,
+				43E1D4882F55AD1D00B94A07 /* ny */,
 			);
 			name = WidgetIntents.intentdefinition;
 			sourceTree = "<group>";
